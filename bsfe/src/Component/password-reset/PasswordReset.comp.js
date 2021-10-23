@@ -4,12 +4,12 @@ import {PropTypes} from "prop-types";
 import { Container, Row, Col, Form ,submit, Button } from 'react-bootstrap'
 
 
-export const LoginForm = ({handleOnChange, handleOnSubmit,formSwitcher, email, pass}) => {
+export const ResetPassword = ({handleOnChange, handleOnSubmit,formSwitcher, email}) => {
     return (
         <Container>
             <Row>
                 <Col>
-                <h1 className="text-info text-center">Client Login</h1>
+                <h1 className="text-info text-center">Reset Password</h1>
                 <hr/>
                 <Form autoComplete="off" onSubmit={handleOnSubmit}>
                     <Form.Group>
@@ -23,18 +23,7 @@ export const LoginForm = ({handleOnChange, handleOnSubmit,formSwitcher, email, p
                         />
                     </Form.Group>
 
-                    <Form.Group>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control
-                        type= "password"
-                        name="password"
-                        value={pass}
-                        onChange={handleOnChange}
-                        placeholder="password"
-                        />
-                    </Form.Group> 
-
-                    <Button type="submit">Login</Button>
+                    <Button type="submit">Reset Password</Button>
                 </Form>
                 <hr/>
                 </Col>
@@ -42,18 +31,17 @@ export const LoginForm = ({handleOnChange, handleOnSubmit,formSwitcher, email, p
 
             <Row>
                 <Col>
-                    <a href="#!" onClick={() => formSwitcher('reset')}> Forget Password</a>
+                    <a href="#!" onClick={() => formSwitcher('login')}> Login Now</a>
                 </Col>
             </Row>
         </Container>
     )
 }
 
-LoginForm.protoTypes = {
+ResetPassword.protoTypes = {
     handleOnChange: PropTypes.func.isRequired,
     handleOnSubmit: PropTypes.func.isRequired,
     formSwitcher: PropTypes.func.isRequired,
-    pass: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     
 };
