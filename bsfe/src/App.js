@@ -3,6 +3,7 @@ import './App.css';
 import { DefaultLayout } from './Layout/DefaultLayout';
 import { Entry } from './page/entry/EntryPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Dashboard } from './page/Dasboard/Dashboard.page';
 
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
     <div className="App">
       {/* <Entry/> */}
       <DefaultLayout>
-        ok anh
-        </DefaultLayout>
+        <Dashboard/>  
+      </DefaultLayout>
     </div>
   );
 }
