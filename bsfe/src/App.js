@@ -3,7 +3,8 @@ import './App.css';
 import { DefaultLayout } from './Layout/DefaultLayout';
 import { Entry } from './page/entry/EntryPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Dashboard } from './page/Dasboard/Dashboard.page';
+import { Dashboard } from './page/Dashboard/Dashboard.page';
+import { AddTicket } from './page/new-ticket/AddTicket.page';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
       {/* <Entry/> */}
       <DefaultLayout>
-        <Dashboard/>  
+        {/* <Dashboard/>   */}
+        <AddTicket/>
       </DefaultLayout>
     </div>
   );

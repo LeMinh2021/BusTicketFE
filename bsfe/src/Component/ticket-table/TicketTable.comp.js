@@ -14,12 +14,18 @@ export const TicketTable = ({tickets}) => {
             </thead>
 
             <tbody>
+
+                {/* Load data from database */}
                 {tickets.length ? tickets.map((row)=>
                 (<tr key={row.id}>
-                    <td>{row.id}</td>
-                    <td>{row.subject}</td>
-                    <td>{row.status}</td>
-                    <td>{row.addedAT}</td>
+                    <td>{row.form}</td>
+                    <td>{row.to}</td>
+                    <td>{row.issueDate}</td>
+                    <td>{row.busesType}</td>
+                    <td>{row.Old}</td>
+                    <td>{row.detail}</td>
+                    <td>{row.price}</td>
+                   
                 </tr>
                 )) : (
                     <tr>

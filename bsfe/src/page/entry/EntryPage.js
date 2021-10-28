@@ -32,6 +32,7 @@ export const Entry = () => {
 		}
 	};
 
+    
     const handleOnSubmit = e => {
         e.preventDefault()
 
@@ -58,7 +59,7 @@ export const Entry = () => {
            return alert("Please enter the password");
         }
     }
-
+    //end 2
     
 
     return (
