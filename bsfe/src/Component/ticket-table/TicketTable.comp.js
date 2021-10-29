@@ -9,8 +9,8 @@ export const TicketTable = ({tickets}) => {
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>form</th>
-                    <th>to</th>
+                    <th>Route</th>
+                    <th>Status</th>
                     <th>issueDate</th>
                     <th>busesType</th>
                     <th>Old</th>
@@ -26,8 +26,8 @@ export const TicketTable = ({tickets}) => {
                 {tickets.length ? tickets.map((row)=>
                 (<tr key={row.id}>
                      <td>{row.id}</td>
-                    <td>{row.form}</td>
-                    <td>{row.to}</td>
+                    <td>{row.Route}</td>
+                    <td>{row.Status}</td>
                     <td>{row.issueDate}</td>
                     <td>{row.busesType}</td>
                     <td>{row.Old}</td>

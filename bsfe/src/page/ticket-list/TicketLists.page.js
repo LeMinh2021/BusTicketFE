@@ -9,7 +9,7 @@ export const TicketLists = () => {
     // 1 create string for search
     const [str, setStr] = useState("");
     const [displayTickets, setDisplayTickets] = useState(tickets);
-    const [displayTickets1, setDisplayTickets1] = useState(tickets);
+    
 
     useEffect(() =>  {
         
@@ -23,14 +23,10 @@ export const TicketLists = () => {
     }
 
     const searchTicket = (searchString) =>{
-        const displayTickets = tickets.filter((row) => row.form.toLowerCase().includes(searchString.toLowerCase()));
+        const displayTickets = tickets.filter((row) => row.Route.toLowerCase().includes(searchString.toLowerCase()));
         console.log(displayTickets);
         setDisplayTickets(displayTickets);
     };
-
-   
-   
-
 
     return (
         <Container>

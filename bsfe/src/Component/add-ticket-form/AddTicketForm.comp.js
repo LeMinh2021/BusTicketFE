@@ -18,11 +18,11 @@ export const AddTicketForm = ({handleOnSubmit,handleOnChange,FormData}) => {
                 <Col>
                     <Form autoComplete="off" onSubmit={handleOnSubmit}>
                         <Form.Group as={Row}>
-                            <Form.Label column sm={3}>Form</Form.Label>
+                            <Form.Label column sm={3}>Route</Form.Label>
                             <Col sm={9}>
                                 <Form.Control 
                                 name="from"   
-                                value={FormData.from} 
+                                value={FormData.Route} 
                                 onChange={handleOnChange}  
                                 placeholder="from"  
                                 required />
@@ -31,11 +31,11 @@ export const AddTicketForm = ({handleOnSubmit,handleOnChange,FormData}) => {
                         <br/>
 
                         <Form.Group as={Row}>
-                            <Form.Label column sm={3}>To</Form.Label>
+                            <Form.Label column sm={3}>Status</Form.Label>
                             <Col sm={9}>
                                 <Form.Control 
                                 name="to"   
-                                value={FormData.to} 
+                                value={FormData.Status} 
                                 onChange={handleOnChange}  
                                 placeholder="to"  
                                 required />
