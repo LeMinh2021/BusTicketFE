@@ -1,15 +1,22 @@
 import React from 'react'
 import { Table } from 'react-bootstrap'
+import {PropTypes} from "prop-types";
 
 export const TicketTable = ({tickets}) => {
+   
     return (
         <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Subjects</th>
-                    <th>Status</th>
-                    <th>Opened Date</th>
+                    <th>form</th>
+                    <th>to</th>
+                    <th>issueDate</th>
+                    <th>busesType</th>
+                    <th>Old</th>
+                    <th>detail</th>
+                    <th>price</th>
+
                 </tr>
             </thead>
 
@@ -18,6 +25,7 @@ export const TicketTable = ({tickets}) => {
                 {/* Load data from database */}
                 {tickets.length ? tickets.map((row)=>
                 (<tr key={row.id}>
+                     <td>{row.id}</td>
                     <td>{row.form}</td>
                     <td>{row.to}</td>
                     <td>{row.issueDate}</td>
@@ -29,7 +37,7 @@ export const TicketTable = ({tickets}) => {
                 </tr>
                 )) : (
                     <tr>
-                        <td colSpan="4" className="text-center">No ticket to show</td>
+                        <td colSpan="8" className="text-center">No ticket to show</td>
                     </tr>
                 )}
                 
@@ -37,4 +45,8 @@ export const TicketTable = ({tickets}) => {
             </tbody>
         </Table>
     )
+}
+
+TicketTable.propTypes ={
+    tickets: PropTypes.array.isRequired,
 }

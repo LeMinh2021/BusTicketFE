@@ -2,8 +2,7 @@
 import React, {useState} from 'react'
 import { Container ,Col, Form, Row, Button} from 'react-bootstrap'
 import {PropTypes} from "prop-types";
-import Option from 'react'
-import Select from 'react'
+
 
 
 
