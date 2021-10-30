@@ -21,10 +21,10 @@ export const AddTicketForm = ({handleOnSubmit,handleOnChange,FormData}) => {
                             <Form.Label column sm={3}>Route</Form.Label>
                             <Col sm={9}>
                                 <Form.Control 
-                                name="from"   
+                                name="Route"   
                                 value={FormData.Route} 
                                 onChange={handleOnChange}  
-                                placeholder="from"  
+                                placeholder="Route"  
                                 required />
                             </Col>
                         </Form.Group>
@@ -34,10 +34,10 @@ export const AddTicketForm = ({handleOnSubmit,handleOnChange,FormData}) => {
                             <Form.Label column sm={3}>Status</Form.Label>
                             <Col sm={9}>
                                 <Form.Control 
-                                name="to"   
+                                name="Status"   
                                 value={FormData.Status} 
                                 onChange={handleOnChange}  
-                                placeholder="to"  
+                                placeholder="Status"  
                                 required />
                             </Col>
                         </Form.Group>

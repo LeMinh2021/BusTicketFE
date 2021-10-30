@@ -4,6 +4,7 @@ import { PageBreadcrumb } from '../../Component/breadcrumb/Breadcrumb.comp'
 import { SearchTicketForm } from '../../Component/search-form/SearchTicketForm.comp'
 import tickets from '../../assets/data/dummy-ticket.json'
 import { TicketTable } from '../../Component/ticket-table/TicketTable.comp'
+import {Link} from "react-router-dom"
 
 export const TicketLists = () => {
     // 1 create string for search
@@ -38,7 +39,9 @@ export const TicketLists = () => {
 
             <Row>
                 <Col>
-                    <Button>Add new ticket</Button>
+                    <Link to="/add-ticket">
+                        <Button>Add new ticket</Button>
+                    </Link>
                 </Col>
 
                 <Col>

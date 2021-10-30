@@ -1,7 +1,7 @@
 .entry-page {
     width: 500px;
     height: 500px;
-    background-color:#9ec9ff;
+    border-radius: 1rem;
     margin: 150px auto;
     display: flex;
     
@@ -10,7 +10,7 @@
 .form-box{
     width: 100%;
     height: 100%;
-    background-color:#9ec9ff;
+    
     margin: auto;
     align-items: center;
     display: flex;

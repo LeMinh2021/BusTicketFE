@@ -63,7 +63,7 @@ export const Entry = () => {
     
 
     return (
-        <div className = "entry-page ">
+        <div className = "entry-page border border-dark   ">
             <div className="form-box">  
 
                 {formLoad === 'login' && <LoginForm

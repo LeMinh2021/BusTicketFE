@@ -6,10 +6,10 @@ import { Container, Row, Col, Form ,submit, Button } from 'react-bootstrap'
 
 export const LoginForm = ({handleOnChange, handleOnSubmit,formSwitcher, email, pass}) => {
     return (
-        <Container>
+        <Container >
             <Row>
-                <Col>
-                <h1 className="text-info text-center">Client Login</h1>
+                <Col >
+                <h1 className=" text-center">Client Login</h1>
                 <hr/>
                 <Form autoComplete="off" onSubmit={handleOnSubmit}>
                     <Form.Group>
@@ -33,15 +33,18 @@ export const LoginForm = ({handleOnChange, handleOnSubmit,formSwitcher, email, p
                         placeholder="password"
                         />
                     </Form.Group> 
-
-                    <Button type="submit">Login</Button>
+                    <br/>
+                    <Form.Group className=" text-center">
+                        <Button type="submit"  >Login</Button>
+                    </Form.Group>
+                    
                 </Form>
                 <hr/>
                 </Col>
             </Row>
 
             <Row>
-                <Col>
+                <Col className=" text-center">
                     <a href="#!" onClick={() => formSwitcher('reset')}> Forget Password</a>
                 </Col>
             </Row>
