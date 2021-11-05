@@ -22,3 +22,8 @@ Content-Type: application/json
     "password": "alo123456"
 
 }
+
+
+### Get a user profile endpoint endpoint
+GET  http://localhost:3001/v1/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbyIsImlhdCI6MTYzNjEwMTk1MSwiZXhwIjoxNjM2MTAyODUxfQ.mtRFv1W_bN712q4UJZxjsUMZSIeLr8tYj4o84rsV6c8
