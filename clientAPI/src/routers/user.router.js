@@ -9,6 +9,7 @@ const {
   getUserByEmail,
   getUserById,
 } = require("../model/user/User.model");
+const { setPasswordRestPin } = require("../model/restPin/RestPin.model");
 
 
 
@@ -93,6 +94,38 @@ router.post("/", async (req, res) => {
     res.json({ status: "success", message: "Login Successfully!", accessJWT ,refreshJWT });
   });
 
+
+  // A. Create and send password reset pin number
+
+  // 4. email the pin
+
+  // B. update Password in DB
+  // 1. receive email, pin and new Password
+  // 2. validate pin
+  // 3. encrypt new password
+  // 4. update password in db
+  // 5. send email notification
+
+  // C. Server side form validation
+  // 1. create middleware to validate form data
+
+  router.post("/reset-password", async (req, res) => {
+    const { email } = req.body;
+  
+    const user = await getUserByEmail(email);
+  
+    if (user && user._id) {
+      /// crate// 2. create unique 6 digit pin
+      const setPin = await setPasswordRestPin(email);
+      return res.json(setPin);
+    }
+  
+    res.json({
+      status: "error",
+      message:
+        "If the email is exist in our database, the password reset pin will be sent shortly.",
+    });
+  });
   
   
   module.exports = router;
