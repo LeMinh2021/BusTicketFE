@@ -22,3 +22,25 @@ Content-Type: application/json
     "password": "alo123456"
 
 }
+
+
+### Get a user profile endpoint endpoint
+GET  http://localhost:3001/v1/user
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbyIsImlhdCI6MTYzNjMwNjkwNSwiZXhwIjoxNjM2MzA3ODA1fQ.qTliU01kTPljLawUUrqJTvtTBcopFQsojms9xM6mQ90
+#### Password reset endpoints
+POST http://localhost:3001/v1/user/reset-password
+Content-Type: application/json 
+
+{
+    "email": "alo"
+}
+
+#### Update new password endpoint
+PATCH  http://localhost:3001/v1/user/reset-password
+Content-Type: application/json 
+
+{
+    "email": "alo",
+    "pin": 934360,
+    "newPassword": "alo12"
+}
