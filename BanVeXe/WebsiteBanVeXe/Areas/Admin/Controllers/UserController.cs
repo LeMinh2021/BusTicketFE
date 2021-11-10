@@ -12,11 +12,10 @@ using WebsiteBanVeXe.Models;
 namespace WebsiteBanVeXe.Areas.Admin.Controllers
 {
 
-
+    [CustomAuthorizeAttribute(RoleID = "ADMIN")]
     public class UserController : BaseController
     {
         private BanVeXeDbContext db = new BanVeXeDbContext();
-
         // GET: Admin/User
         public ActionResult Index()
         {
