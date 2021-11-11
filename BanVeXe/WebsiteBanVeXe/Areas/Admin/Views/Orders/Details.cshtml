@@ -8,7 +8,7 @@
 <div class="container bg-white">
     <div class="row">
         <div class="col-md-7">
-            <h3>Chi tiết Order</h3>
+            <h3>Order Details</h3>
             <table class="table border">
                 <tbody>
                     <tr>
@@ -16,11 +16,11 @@
                         <td class="b-id">@Model.ID</td>
                     </tr>
                     <tr>
-                        <td class="title">Mã Order</td>
+                        <td class="title">Order Code</td>
                         <td class="b-id">@Model.code</td>
                     </tr>
                     <tr>
-                        <td class="title">Tên khách hàng</td>
+                        <td class="title">Customer name</td>
                         <td>@Model.name </td>
                     </tr>
                     <tr>
@@ -28,51 +28,51 @@
                         <td>@Model.email</td>
                     </tr>
                     <tr>
-                        <td class="title">SDT</td>
+                        <td class="title">Phone Number</td>
                         <td>@Model.phone</td>
                     </tr>
                     <tr>
-                        <td class="title">Số Ghế</td>
+                        <td class="title">Seats</td>
                         <td>@Model.guestTotal</td>
                     </tr>
                     <tr>
-                        <td class="title">Giới tính</td>
+                        <td class="title">Sex</td>
                         <td>@Model.gioitinh</td>
                     </tr>
                     <tr>
-                        <td class="title">Quốc tịch</td>
+                        <td class="title">Nationality</td>
                         <td>@Model.quoctich</td>
                     </tr>
                     <tr>
-                        <td class="title">Lời nhắn</td>
+                        <td class="title">Message</td>
                         <td>@Model.mess</td>
                     </tr>
                     <tr>
-                        <td class="title">Ngày tạo</td>
+                        <td class="title">Date created</td>
                         <td>@Model.created_ate (m/d/y)</td>
                     </tr>
                     @if (Model.StatusPayment == 1)
                     {
                         <tr>
-                            <td class="title">Trạng thái thanh toán</td>
-                            <td class="text-success">Đã thanh toán <i class="fas fa-check"></i></td>
+                            <td class="title">Payment Status</td>
+                            <td class="text-success">Paid<i class="fas fa-check"></i></td>
                         </tr>
                     }
                     else
                     {
                         <tr>
-                            <td class="title">Trạng thái thanh toán</td>
-                            <td>Chưa thanh toán vui lòng thanh toán lại.</td>
+                            <td class="title">Payment Status</td>
+                            <td>Not paid, please pay again.</td>
                         </tr>
 
                     }
                     <tr>
-                        <td class="title">Phương thức thanh toán:</td>
+                        <td class="title">Payment methods:</td>
                         <td>@Model.deliveryPaymentMethod.</td>
                     </tr>
                     <tr>
-                        <td class="title">Tổng tiền:</td>
-                        <td><h4 class="text-danger"> @Model.total.ToString("N0") VND</h4></td>
+                        <td class="title">Total money:</td>
+                        <td><h4 class="text-danger"> @Model.total.ToString("N0") USD</h4></td>
                     </tr>
                 </tbody>
             </table>

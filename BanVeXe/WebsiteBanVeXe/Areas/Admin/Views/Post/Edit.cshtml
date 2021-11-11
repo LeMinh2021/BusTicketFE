@@ -31,11 +31,11 @@
     <!-- /.content-header -->
     <div class="card card-title bg-white p-1">
         <div class="row">
-            <div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Quản lý Bài Viết </h5> </div>
+            <div class="col-md-6 "> <h5 class="pl-2 mt-2 text-blues">Manage Posts</h5> </div>
             <div class="col-md-6 m-0">
                 <ol class="breadcrumb bg-white float-sm-right m-0">
                     <li class="breadcrumb-item"><a href="/Admin">Home</a></li>
-                    <li class="breadcrumb-item active">Cập nhật bài viết</li>
+                    <li class="breadcrumb-item active">Update post</li>
                 </ol>
             </div>
         </div>
@@ -55,23 +55,23 @@
                 @Html.HiddenFor(model => model.img)
                 <div class=" row ">
                     <div class="col-md-4">  </div>
-                    <div class="col-md-4"> <h3 class="text-center font-weight-bold text-success "> CẬP NHẬT BÀI VIẾT</h3> </div>
+                    <div class="col-md-4"> <h3 class="text-center font-weight-bold text-success ">Update post</h3> </div>
                     <div class="col-md-4 ">
                         <div class="float-right">
-                            <button class="btn btn-sm bg-success text-white"><i class="far fa-save"></i> Lưu</button>
-                            <a href="~/admin/post" class="btn btn-sm bg-danger text-white"><i class="far fa-window-close"></i> Hủy</a>
+                            <button class="btn btn-sm bg-success text-white"><i class="far fa-save"></i>Save</button>
+                            <a href="~/admin/post" class="btn btn-sm bg-danger text-white"><i class="far fa-window-close"></i>Cancel</a>
                         </div>
                     </div>
                 </div>
                 <div class=" row ">
                     <div class="col-md-8">
                         <div>
-                            <label for="psw"><span class="text-secondary ">Tiêu đề bài viết</span></label>
+                            <label for="psw"><span class="text-secondary ">Post title</span></label>
                             @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
                         </div>
                         <div>
-                            <label for="psw"><span class="text-secondary ">Nội dung bài viết</span></label>
+                            <label for="psw"><span class="text-secondary ">Content</span></label>
                             @Html.TextAreaFor(model => model.detail, new { @class = "form-control textarea",
                            @style = "width: 100%;font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;" })
                             @Html.ValidationMessageFor(model => model.detail, "", new { @class = "text-danger" })
@@ -80,19 +80,19 @@
                     </div>
                     <div class="col-md-4">
 
-                        <label for="psw"><span class="text-secondary ">Chọn loại Loại Bài viết</span></label>
+                        <label for="psw"><span class="text-secondary ">Select the type of Post Type</span></label>
                         <div>
                             @Html.DropDownListFor(model => model.topid, listcat, new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.topid, "", new { @class = "text-danger" })
                         </div>
                         <div>
-                            <label for="psw"><span class="text-secondary ">Hình ảnh Bài viết</span></label>
+                            <label for="psw"><span class="text-secondary ">Image Posts</span></label>
                             <input type="file" class="form-control" name="img" />
                             @Html.ValidationMessageFor(model => model.img, "", new { @class = "text-danger" })
 
                         </div>
                         <div>
-                            <label for="psw"><span class="text-secondary ">Trang Thái</span></label>
+                            <label for="psw"><span class="text-secondary ">Status</span></label>
                             @Html.DropDownListFor(model => model.status, status, new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
 

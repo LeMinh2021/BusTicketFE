@@ -8,8 +8,8 @@ namespace WebsiteBanVeXe.Library
     public class Util
     {
         // email dung de gui di
-        public static string email = "vanhung3339@gmail.com";
+        public static string email = "minhlhth2002022@fpt.edu.vn";
         //pass email
-        public static string password = "provanhung";
+        public static string password = "123456";
     }
 }

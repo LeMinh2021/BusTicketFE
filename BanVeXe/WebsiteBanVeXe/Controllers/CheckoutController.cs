@@ -238,7 +238,7 @@ namespace WebsiteBanVeXe.Controllers
             db.SaveChanges();
             if(order.StatusPayment == 3)
             {
-                string mailBody = renderHtmlEmail(order,"Sử dụng Email này để thanh toán tại quầy");
+                string mailBody = renderHtmlEmail(order, "Use this Email to pay at the counter");
                 // neeu chon hinh thuc thanh toan Mua ves
                 SendEmail(order.email, order.name, mailBody);
             }
@@ -320,7 +320,7 @@ namespace WebsiteBanVeXe.Controllers
         {
 
             MailMessage mm = new MailMessage(Util.email, CustomerEmail);
-            mm.Subject = "[YATRA.COM] THÔNG BÁO XÁC NHẬN ĐƠN ĐẶT VÉ";
+            mm.Subject = "SRC THÔNG BÁO XÁC NHẬN ĐƠN ĐẶT VÉ";
             mm.Body = mailBody;
             mm.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient();

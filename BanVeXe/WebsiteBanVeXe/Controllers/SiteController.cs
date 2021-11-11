@@ -84,7 +84,7 @@ namespace WebsiteBanVeXe.Controllers
             int pageSize = 8;
             ViewBag.url = "chuyen-xe";
             int pageNumber = (page ?? 1);
-            ViewBag.breadcrumb = "Tất cả chuyến XuatPhat";
+            ViewBag.breadcrumb = "All Departures";
             var list_Coach = db.tickets.Where(m => m.status == 1).ToList();
             return View("allCoach", list_Coach.ToPagedList(pageNumber, pageSize));
         }
@@ -123,7 +123,7 @@ namespace WebsiteBanVeXe.Controllers
             int pageSize = 8;
             int pageNumber = (page ?? 1);
             ViewBag.url = "tim-kiem-bai-viet?keyw=" + keyw + "";
-            @ViewBag.nameTopic = "Tim kiếm từ khóa: " + keyw;
+            @ViewBag.nameTopic = "" + keyw;
             var list = db.Posts.Where(m => m.title.Contains(keyw) || m.detail.Contains(keyw)).OrderBy(m => m.ID);
             return View("postOftoPic", list.ToList().ToPagedList(pageNumber, pageSize));
         }

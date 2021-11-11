@@ -26,14 +26,14 @@ namespace WebsiteBanVeXe.Controllers
            
                 if (user_account.Count() == 0)
                 {
-                    ViewBag.error = "Tên Đăng Nhập Không Đúng";
+                    ViewBag.error = "Username Incorrect";
                 }
                 else
                 {
                     var pass_account = db.Users.Where(m => m.access != 1 && m.status == 1 && m.password == Pass);
                     if (pass_account.Count() == 0)
                     {
-                        ViewBag.error = "Mật Khẩu Không Đúng";
+                        ViewBag.error = "Incorrect password";
                     }
                     else
                     {
@@ -42,7 +42,7 @@ namespace WebsiteBanVeXe.Controllers
                     Session["userName11"] = user.fullname;
                     Session["id"] = user.ID;
                     if (!Response.IsRequestBeingRedirected)
-                        Message.set_flash("Đăng nhập thành công ", "success");
+                        Message.set_flash("Logged in successfully ", "success");
                     return Redirect("~/tai-khoan");
                 }
                 }
@@ -56,7 +56,7 @@ namespace WebsiteBanVeXe.Controllers
             Session["userName11"] = "";
             Session[Common.CommonConstants.CUSTOMER_SESSION]="";
             Response.Redirect("~/dang-nhap");
-            Message.set_flash("Đăng xuất thành công", "success");
+            Message.set_flash("Sign out successful", "success");
         }
         public ActionResult register()
         {
@@ -82,7 +82,7 @@ namespace WebsiteBanVeXe.Controllers
                 var Luser = db.Users.Where(m => m.status == 1 && m.username == uname && m.access == 1);
                 if (Luser.Count() > 0)
                 {
-                    ViewBag.error = "Tên Đăng Nhập đã tồn tại";
+                    ViewBag.error = "Username available";
                     return View("loginEndRegister");
                 }
                 else
@@ -99,12 +99,12 @@ namespace WebsiteBanVeXe.Controllers
                     muser.status = 1;
                     db.Users.Add(muser);
                     db.SaveChanges();
-                    Message.set_flash("Đăng ký tài khoản thành công, Đăng nhập ở đây ", "success");
+                    Message.set_flash("Successful account registration, Login here ", "success");
                     return Redirect("~/dang-nhap");
                 }
 
             }
-            Message.set_flash("Đăng ký tài khoản thất bai", "danger");
+            Message.set_flash("Account registration failed", "danger");
             return View("register");
         }
 
@@ -121,7 +121,7 @@ namespace WebsiteBanVeXe.Controllers
             Session.Add(CommonConstants.CUSTOMER_SESSION, user);
             db.Entry(user).State = EntityState.Modified;
             db.SaveChanges();
-            ViewBag.success = "Cập nhật thành công.";
+            ViewBag.success = "Update successful.";
             return View("Myaccount", user);
         }
         public ActionResult ListOderCus()
